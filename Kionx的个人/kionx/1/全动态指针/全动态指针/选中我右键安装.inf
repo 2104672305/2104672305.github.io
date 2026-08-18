@@ -1,0 +1,58 @@
+[Version]
+signature="$CHICAGO$"
+
+[DefaultInstall]
+CopyFiles = Scheme.Cur
+AddReg    = Scheme.Reg,Wreg
+
+[DestinationDirs]
+Scheme.Cur = 10,"%CUR_DIR%"
+
+[Scheme.Reg]
+HKCU,"Control Panel\Cursors\Schemes","%SCHEME_NAME%",,"%10%\%CUR_DIR%\%pointer%,%10%\%CUR_DIR%\%help%,%10%\%CUR_DIR%\%work%,%10%\%CUR_DIR%\%busy%,%10%\%CUR_DIR%\%cross%,%10%\%CUR_DIR%\%text%,%10%\%CUR_DIR%\%handwrite%,%10%\%CUR_DIR%\%unavailiable%,%10%\%CUR_DIR%\%vert%,%10%\%CUR_DIR%\%horz%,%10%\%CUR_DIR%\%right_change%,%10%\%CUR_DIR%\%left_change%,%10%\%CUR_DIR%\%move%,%10%\%CUR_DIR%\%ready%,%10%\%CUR_DIR%\%link%"
+
+[Wreg]
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Runonce\Setup\","",,"rundll32.exe shell32.dll,Control_RunDLL main.cpl @0,1"
+
+[Scheme.Cur]
+"正常.ani"
+"后台.ani"
+"繁忙.ani"
+"文本.ani"
+"垂直.ani"
+"水平.ani"
+"移动.ani"
+"链接.ani"
+"手写.ani"
+"候选.ani"
+"精确选择.ani"
+"提示.ani"
+"左斜向.ani"
+"右斜向.ani"
+"不可用.ani"
+
+[Strings]
+CUR_DIR        		= "Cursors\全动态指针"
+SCHEME_NAME    		= "全动态指针"
+SCHEME_DESCRIPTION	= "EveZero"
+pointer			= "正常.ani"
+help			= "提示.ani"
+work			= "后台.ani"
+busy			= "繁忙.ani"
+cross			= "精确选择.ani"
+text			= "文本.ani"
+handwrite			= "手写.ani"
+unavailiable		= "不可用.ani"
+vert			= "垂直.ani"
+horz			= "水平.ani"
+left_change		= "左斜向.ani"
+right_change		= "右斜向.ani"
+move			= "移动.ani"
+ready			= "候选.ani"
+link			= "链接.ani"
+
+
+
+
+
+
