@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kionx的个人网站</title>
+    <link href="1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="bg"></div>
+
+    <canvas id="particles"></canvas>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html" class="active">首页</a></li>
+                <li><a href="./about.html">关于我</a></li>
+                <li><a href="./myAlbum.html">相册</a></li>
+                <li><a href="./myIdol.html">学校</a></li>
+                <li><a href="./myMusic.html">爱好</a></li>
+                <li><a href="./myLog.html">日志</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img class="avatar" src="images/gerenjiashao1.avif" alt="我的头像">
+            <h1>欢迎来到我的个人网站</h1>
+            <p class="subtitle">我是kionx，一个热爱学习、探索与生活的软件技术专业学生。</p>
+            <div class="social-links">
+                <a href="#" title="Bilibili">Bilibili</a>
+                <a href="#" title="GitHub">GitHub</a>
+            </div>
+        </section>
+
+        <section class="quick-grid">
+            <a class="quick-card" href="./about.html">
+                <div class="icon">👤</div>
+                <div class="name">关于我</div>
+                <div class="desc">了解我的基本信息</div>
+            </a>
+            <a class="quick-card" href="./myAlbum.html">
+                <div class="icon">📷</div>
+                <div class="name">相册</div>
+                <div class="desc">我拍下的照片</div>
+            </a>
+            <a class="quick-card" href="./myIdol.html">
+                <div class="icon">🏫</div>
+                <div class="name">学校</div>
+                <div class="desc">临沂大学沂水校区</div>
+            </a>
+            <a class="quick-card" href="./myMusic.html">
+                <div class="icon">🎮</div>
+                <div class="name">爱好</div>
+                <div class="desc">游戏 · 动漫 · 羽毛球</div>
+            </a>
+        </section>
+
+        <section class="card">
+            <h2>最新动态</h2>
+            <ul class="timeline">
+                <li>
+                    <div class="date">2026-08-18</div>
+                    <div class="title">个人网站全新改版上线</div>
+                    <div class="content">重构了页面布局与样式，优化了响应式体验，希望你喜欢这个新版本。</div>
+                </li>
+                <li>
+                    <div class="date">2026-07</div>
+                    <div class="title">暑假计划进行中</div>
+                    <div class="content">学习 Web 前端技术，努力把网站做得更好看、更好用。</div>
+                </li>
+                <li>
+                    <div class="date">2026-06</div>
+                    <div class="title">期末周结束</div>
+                    <div class="content">考试结束，终于可以尽情打羽毛球和看番啦！</div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="card music-card">
+            <h2>听首歌放松一下吧 🎵</h2>
+            <p>《遠い空へ》——来自《缘之空》的纯音乐</p>
+            <audio controls preload="none">
+                <source src="音频/【缘の空】遠い空へ-纯音乐 - 1.「ヨスガノソラ」 - 遠い空へ(Av540169084,P1).mp3" type="audio/mpeg">
+                你的浏览器不支持播放音频！
+            </audio>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023-2026 kionx · 用爱发电 ⚡ <span class="heart">♥</span></p>
+        <p>本站由原生 HTML / CSS 手写，未经框架雕琢，敬请见谅。</p>
+    </footer>
+
+    <button id="backTop" title="回到顶部">↑</button>
+
+    <script src="particles.js"></script>
+    <script>
+        var btn = document.getElementById("backTop");
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 400) {
+                btn.classList.add("show");
+            } else {
+                btn.classList.remove("show");
+            }
+        });
+        btn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+</body>
+</html>

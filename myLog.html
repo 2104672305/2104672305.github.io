@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日志 - kionx的个人网站</title>
+    <link href="1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="bg"></div>
+
+    <canvas id="particles"></canvas>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="./about.html">关于我</a></li>
+                <li><a href="./myAlbum.html">相册</a></li>
+                <li><a href="./myIdol.html">学校</a></li>
+                <li><a href="./myMusic.html">爱好</a></li>
+                <li><a href="./myLog.html" class="active">日志</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h1>我的日志</h1>
+            <p>记录生活里的点滴小事。</p>
+        </section>
+
+        <section class="card">
+            <ul class="timeline">
+                <li>
+                    <div class="date">2026-08-18</div>
+                    <div class="title">网站改版</div>
+                    <div class="content">重新设计了整个网站，感谢每一位访问这里的朋友。</div>
+                </li>
+                <li>
+                    <div class="date">2026-07-12</div>
+                    <div class="title">假期小记</div>
+                    <div class="content">这个暑假决定认真学一学前端的知识，把网站做出更多花样。</div>
+                </li>
+                <li>
+                    <div class="date">2026-06-20</div>
+                    <div class="title">期末结束</div>
+                    <div class="content">考试周终于结束啦，先好好放松一段时间。</div>
+                </li>
+                <li>
+                    <div class="date">2026-03-15</div>
+                    <div class="title">新学期</div>
+                    <div class="content">大二下学期开始，专业课越来越有意思了。</div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023-2026 kionx · 用爱发电 ⚡ <span class="heart">♥</span></p>
+        <p>本站由原生 HTML / CSS 手写，未经框架雕琢，敬请见谅。</p>
+    </footer>
+
+    <button id="backTop" title="回到顶部">↑</button>
+
+    <script src="particles.js"></script>
+    <script>
+        var btn = document.getElementById("backTop");
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 400) {
+                btn.classList.add("show");
+            } else {
+                btn.classList.remove("show");
+            }
+        });
+        btn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+</body>
+</html>

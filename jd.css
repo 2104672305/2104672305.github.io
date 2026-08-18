@@ -1,0 +1,56 @@
+body {  
+    margin: 0;  
+    padding: 0;  
+    font-family: Arial, sans-serif;  
+    background-image: url("images/2.jpg"); /* 替换为你的背景图片路径 */  
+    background-repeat: no-repeat;  
+    background-size: cover;  
+    background-position: center;  
+    color: #fff; /* 如果背景图片较暗，可以使用白色文字 */  
+}  
+  
+header {  
+    background-color: rgba(0, 0, 0, 0.5); /* 导航栏的半透明背景 */  
+    padding: 10px;  
+    text-align: center;  
+}  
+  
+nav ul {  
+    list-style-type: none;  
+    margin: 0;  
+    padding: 0;  
+    display: flex;  
+    justify-content: center;  
+}  
+  
+nav ul li {  
+    margin: 0 10px;  
+}  
+  
+nav ul li a {  
+    text-decoration: none;  
+    color: #fff;  
+    padding: 5px 10px;  
+    border-radius: 5px;  
+    transition: background-color 0.3s ease;  
+}  
+  
+nav ul li a:hover {  
+    background-color: rgba(255, 255, 255, 0.2);  
+}  
+  
+.section {  
+    padding: 20px;  
+    text-align: center;  
+    background-color: rgba(0, 0, 0, 0.5); /* 内容区域的半透明背景 */  
+    margin-bottom: 20px;  
+}  
+  
+footer {  
+    background-color: rgba(0, 0, 0, 0.5);  
+    padding: 10px;  
+    text-align: center;  
+    position: fixed;  
+    bottom: 0;  
+    width: 100%;  
+}

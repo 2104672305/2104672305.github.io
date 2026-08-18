@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我 - kionx的个人网站</title>
+    <link href="1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="bg"></div>
+
+    <canvas id="particles"></canvas>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="./about.html" class="active">关于我</a></li>
+                <li><a href="./myAlbum.html">相册</a></li>
+                <li><a href="./myIdol.html">学校</a></li>
+                <li><a href="./myMusic.html">爱好</a></li>
+                <li><a href="./myLog.html">日志</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h1>我的个人简介</h1>
+            <table class="info-table">
+                <tr><td>姓名</td><td>kionx</td></tr>
+                <tr><td>性别</td><td>男</td></tr>
+                <tr><td>学校</td><td>临沂大学沂水校区</td></tr>
+                <tr><td>专业</td><td>软件技术</td></tr>
+                <tr><td>爱好</td><td>游戏、羽毛球、动漫、编程、阅读、影视</td></tr>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>一些想说的话</h2>
+            <p>打羽毛球时挥洒汗水的感觉，可以摆脱一天的疲惫。</p>
+            <p>体验游戏中竞技的快感，是一种很棒的享受。</p>
+            <p>领略动漫中不一样的人生，体会另一种世界规则下的生活，让我沉迷其中。</p>
+        </section>
+
+        <section class="card">
+            <h2>关于这个小站</h2>
+            <p>这是我的小网站，一个微小的空间，记录我的生活、学习与热爱。</p>
+            <p>本站使用原生 HTML / CSS 手写，未经任何框架雕琢。才疏学浅，拙作见谅。</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023-2026 kionx · 用爱发电 ⚡ <span class="heart">♥</span></p>
+        <p>本站由原生 HTML / CSS 手写，未经框架雕琢，敬请见谅。</p>
+    </footer>
+
+    <button id="backTop" title="回到顶部">↑</button>
+
+    <script src="particles.js"></script>
+    <script>
+        var btn = document.getElementById("backTop");
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 400) {
+                btn.classList.add("show");
+            } else {
+                btn.classList.remove("show");
+            }
+        });
+        btn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+</body>
+</html>
