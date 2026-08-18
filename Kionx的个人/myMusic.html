@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱好 - kionx的个人网站</title>
+    <link href="1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="bg"></div>
+
+    <canvas id="particles"></canvas>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="./about.html">关于我</a></li>
+                <li><a href="./myAlbum.html">相册</a></li>
+                <li><a href="./myIdol.html">学校</a></li>
+                <li><a href="./myMusic.html" class="active">爱好</a></li>
+                <li><a href="./myLog.html">日志</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h1>我的爱好</h1>
+            <p>鼠标悬停在图片上可以看清全貌。</p>
+        </section>
+
+        <section class="card">
+            <div class="hobby-item">
+                <h3>第一次的 Steam 游戏</h3>
+                <img src="images/我的爱好/2.jpg" alt="第一次的 Steam 游戏">
+            </div>
+            <hr>
+            <div class="hobby-item">
+                <h3>通关的第一部文字冒险游戏</h3>
+                <img src="images/我的爱好/1.jpg" alt="第一部文字冒险游戏">
+            </div>
+            <hr>
+            <div class="hobby-item">
+                <h3>最喜欢的 anime</h3>
+                <img src="images/我的爱好/3.webp" alt="最喜欢的 anime">
+            </div>
+            <hr>
+            <div class="hobby-item">
+                <h3>喜欢的作曲家</h3>
+                <img src="images/我的爱好/4.webp" alt="喜欢的作曲家">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023-2026 kionx · 用爱发电 ⚡ <span class="heart">♥</span></p>
+        <p>本站由原生 HTML / CSS 手写，未经框架雕琢，敬请见谅。</p>
+    </footer>
+
+    <button id="backTop" title="回到顶部">↑</button>
+
+    <script src="particles.js"></script>
+    <script>
+        var btn = document.getElementById("backTop");
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 400) {
+                btn.classList.add("show");
+            } else {
+                btn.classList.remove("show");
+            }
+        });
+        btn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+</body>
+</html>

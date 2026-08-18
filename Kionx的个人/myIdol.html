@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学校 - kionx的个人网站</title>
+    <link href="1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="bg"></div>
+
+    <canvas id="particles"></canvas>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="./about.html">关于我</a></li>
+                <li><a href="./myAlbum.html">相册</a></li>
+                <li><a href="./myIdol.html" class="active">学校</a></li>
+                <li><a href="./myMusic.html">爱好</a></li>
+                <li><a href="./myLog.html">日志</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="school-info">
+            <h1>我的学校</h1>
+            <p>沂水校区是临沂大学二级办学单位之一，是山东省教育厅批准的公办全日制本、专科大学校区。</p>
+            <p>校区坐落在沂蒙山区腹地沂水县，其前身是山东省沂水师范学校，始建于1948年7月，是红色政权在山东解放区建立的第一所师范学校，历经"教干教师训练班"、"山东省立沂蒙中学"、"山东省立沂蒙乡村师范"、"山东省立沂水师范学校"、"山东省沂水师范学校"诸阶段。2007年6月，学校整建制并入到临沂师范学院；2010年1月，临沂师范学院职业教育学院在沂水校区挂牌；2010年11月，临沂师范学院更名为临沂大学，学校随之更名为临沂大学沂水校区。</p>
+        </section>
+
+        <section class="school-info">
+            <h2>校园风景</h2>
+            <p>拖动或点击箭头浏览，点击照片可放大查看。</p>
+            <br>
+            <div class="gallery" id="gallery">
+                <div class="gallery-slide">
+                    <img src="images/我的学校/1.jpg" alt="校园 1">
+                    <div class="caption">校园 · 1</div>
+                </div>
+                <div class="gallery-slide">
+                    <img src="images/我的学校/2.jpg" alt="校园 2">
+                    <div class="caption">校园 · 2</div>
+                </div>
+                <div class="gallery-slide">
+                    <img src="images/我的学校/3.jpg" alt="校园 3">
+                    <div class="caption">校园 · 3</div>
+                </div>
+                <div class="gallery-slide">
+                    <img src="images/我的学校/4.jpg" alt="校园 4">
+                    <div class="caption">校园 · 4</div>
+                </div>
+                <div class="gallery-slide">
+                    <img src="images/我的学校/5.jpg" alt="校园 5">
+                    <div class="caption">校园 · 5</div>
+                </div>
+                <div class="gallery-slide">
+                    <img src="images/我的学校/6.jpg" alt="校园 6">
+                    <div class="caption">校园 · 6</div>
+                </div>
+                <div class="gallery-slide">
+                    <img src="images/我的学校/7.jpg" alt="校园 7">
+                    <div class="caption">校园 · 7</div>
+                </div>
+                <div class="gallery-slide">
+                    <img src="images/我的学校/8.jpg" alt="校园 8">
+                    <div class="caption">校园 · 8</div>
+                </div>
+            </div>
+            <div class="gallery-nav">
+                <button class="gallery-arrow" id="prevBtn" title="上一张">‹</button>
+                <button class="gallery-arrow" id="nextBtn" title="下一张">›</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023-2026 kionx · 用爱发电 ⚡ <span class="heart">♥</span></p>
+        <p>本站由原生 HTML / CSS 手写，未经框架雕琢，敬请见谅。</p>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <button class="close" id="closeLb" title="关闭">×</button>
+        <img id="lbImg" src="" alt="放大查看">
+    </div>
+
+    <button id="backTop" title="回到顶部">↑</button>
+
+    <script src="particles.js"></script>
+    <script>
+        var gallery = document.getElementById("gallery");
+        document.getElementById("prevBtn").addEventListener("click", function () {
+            gallery.scrollBy({ left: -gallery.clientWidth * 0.7, behavior: "smooth" });
+        });
+        document.getElementById("nextBtn").addEventListener("click", function () {
+            gallery.scrollBy({ left: gallery.clientWidth * 0.7, behavior: "smooth" });
+        });
+
+        var lightbox = document.getElementById("lightbox");
+        var lbImg = document.getElementById("lbImg");
+        document.querySelectorAll(".gallery-slide img").forEach(function (img) {
+            img.addEventListener("click", function () {
+                lbImg.src = img.src;
+                lightbox.classList.add("open");
+            });
+        });
+        document.getElementById("closeLb").addEventListener("click", function () {
+            lightbox.classList.remove("open");
+        });
+        lightbox.addEventListener("click", function (e) {
+            if (e.target === lightbox) {
+                lightbox.classList.remove("open");
+            }
+        });
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") {
+                lightbox.classList.remove("open");
+            }
+        });
+
+        var btn = document.getElementById("backTop");
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 400) {
+                btn.classList.add("show");
+            } else {
+                btn.classList.remove("show");
+            }
+        });
+        btn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相册 - kionx的个人网站</title>
+    <link href="1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="bg"></div>
+
+    <canvas id="particles"></canvas>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="./about.html">关于我</a></li>
+                <li><a href="./myAlbum.html" class="active">相册</a></li>
+                <li><a href="./myIdol.html">学校</a></li>
+                <li><a href="./myMusic.html">爱好</a></li>
+                <li><a href="./myLog.html">日志</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h1>我拍的照片</h1>
+            <p>把鼠标移动到照片上，它们会慢慢展开。</p>
+        </section>
+
+        <div class="photos-main">
+            <div class="photo"><img src="images/我的相册/1.jpg" alt="照片 1"></div>
+            <div class="photo"><img src="images/我的相册/2.jpg" alt="照片 2"></div>
+            <div class="photo"><img src="images/我的相册/3.jpg" alt="照片 3"></div>
+        </div>
+        <div class="photos-main">
+            <div class="photo"><img src="images/我的相册/4.jpg" alt="照片 4"></div>
+            <div class="photo"><img src="images/我的相册/5.jpg" alt="照片 5"></div>
+            <div class="photo"><img src="images/我的相册/6.jpg" alt="照片 6"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023-2026 kionx · 用爱发电 ⚡ <span class="heart">♥</span></p>
+        <p>本站由原生 HTML / CSS 手写，未经框架雕琢，敬请见谅。</p>
+    </footer>
+
+    <button id="backTop" title="回到顶部">↑</button>
+
+    <script src="particles.js"></script>
+    <script>
+        var btn = document.getElementById("backTop");
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 400) {
+                btn.classList.add("show");
+            } else {
+                btn.classList.remove("show");
+            }
+        });
+        btn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+</body>
+</html>
